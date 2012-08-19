@@ -8,7 +8,6 @@ Guildrewind::Application.routes.draw do
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-
   match '/newpost', to: 'posts#new'
 
   match '/help',    to: 'static_pages#help'

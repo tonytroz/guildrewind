@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to "GuildRewind", root_path, id: "logo" %>
       <nav>
-        <a class="btn btn-success">New Post</a>
+        <%= link_to "New Post", newpost_path, class: "btn btn-success" %>
         <%= link_to "Browse Posts", posts_path, class: "btn btn-primary" %>
         <ul class="nav pull-right">
           <% if signed_in? %>
