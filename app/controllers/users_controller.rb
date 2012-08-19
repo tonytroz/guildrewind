@@ -17,18 +17,6 @@ class UsersController < ApplicationController
   	@user = User.new
   end
 
-  def edit
-  end
-
-  def destroy
-    user = User.find(params[:id])
-    unless current_user?(user)
-      user.destroy
-      flash[:success] = "User destroyed."
-    end
-    redirect_to users_path
-  end
-
   def create
     redirect_to root_path unless !signed_in?
     @user = User.new(params[:user])
@@ -41,7 +29,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
+  def edit
+  end
+
+   def update
     if @user.update_attributes(params[:user])
       flash[:success] = "Profile updated"
       sign_in @user
@@ -49,6 +40,15 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    user = User.find(params[:id])
+    unless current_user?(user)
+      user.destroy
+      flash[:success] = "User destroyed."
+    end
+    redirect_to users_path
   end
 
   private
