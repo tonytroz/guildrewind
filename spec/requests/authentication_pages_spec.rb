@@ -93,8 +93,6 @@ describe "Authentication" do
           it { should have_selector('title', text: 'Sign in') }
         end
       end
-<<<<<<< HEAD
-=======
 
       describe "in the Posts controller" do
 
@@ -108,7 +106,6 @@ describe "Authentication" do
           specify { response.should redirect_to(signin_path) }
         end
       end
->>>>>>> user-posts
     end
 
     describe "as wrong user" do

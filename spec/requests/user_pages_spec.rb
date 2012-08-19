@@ -33,7 +33,6 @@ describe "User pages" do
     describe "delete links" do
 
       it { should_not have_link('delete') }
-<<<<<<< HEAD
 
       describe "as an admin user" do
         let(:admin) { FactoryGirl.create(:admin) }
@@ -56,8 +55,6 @@ describe "User pages" do
 
   describe "signup page" do
     before { visit signup_path }
-=======
->>>>>>> user-posts
 
       describe "as an admin user" do
         let(:admin) { FactoryGirl.create(:admin) }
