@@ -121,6 +121,26 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
+.navbar-search .search-query {
+    padding-left: 29px;
+    background-color: hsl(360, 0%, 17%) !important;
+}
+
+.navbar-search .icon-search {
+    position: absolute;
+    top: 6px;
+    left: 11px;
+    background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings-white.png");
+}
+
+.navbar-search .search-query:focus, .navbar-search .search-query.focused {
+    padding-left: 30px;
+}
+
+.search-query:focus + .icon-search {
+    /*background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");*/
+}
+
 /* footer */
 
 footer {
