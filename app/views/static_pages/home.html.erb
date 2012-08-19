@@ -2,8 +2,9 @@
   <h1>A Social Network For Lost Gamers</h1>
 
   <h2>Welcome to GuildRewind.</h2>
-
+  <% if !signed_in? %>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
+  <% end %>
 
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :signed_in_user, only: [:create, :new, :destroy, :edit, :update]
-  before_filter :correct_user,   only: [:edit, :update]
+  before_filter :signed_in_user, only: [:new, :edit, :destroy, :create]
+  before_filter :correct_user,   only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.paginate(page: params[:page])
