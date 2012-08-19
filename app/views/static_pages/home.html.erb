@@ -1,10 +1,14 @@
-<div class="center hero-unit">
-  <h1>A Social Network For Lost Gamers</h1>
-
-  <h2>Welcome to GuildRewind.</h2>
-  <% if !signed_in? %>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
+<%= image_tag("home1.png", size: "5000x5000", border: 0, alt: "home1") %>
+<% if !signed_in? %>
+  <div class="center">
+	  <%= link_to "Sign up now!", signup_path, id: "signup", class: "btn btn-large btn-custom" %>
+  </div>
   <% end %>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<div class="hero-unit center">
+  <%= image_tag("twitterButton.png", size: "100x100", border: 0, alt: "twitter") %>
+  Twitter
+  <%= image_tag("blogButton.png", size: "100x100", border: 0, alt: "blog") %>
+  Blog
+  <%= image_tag("statisticsButton.png", size: "100x100", border: 0, alt: "statistics") %>
+  Statistics
+</div>
