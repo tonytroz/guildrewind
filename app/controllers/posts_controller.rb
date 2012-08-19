@@ -28,7 +28,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    def update
     if @post.update_attributes(params[:user])
       flash[:success] = "Post updated"
       redirect_to @post
