@@ -33,6 +33,7 @@ describe "User pages" do
     describe "delete links" do
 
       it { should_not have_link('delete') }
+<<<<<<< HEAD
 
       describe "as an admin user" do
         let(:admin) { FactoryGirl.create(:admin) }
@@ -55,17 +56,50 @@ describe "User pages" do
 
   describe "signup page" do
     before { visit signup_path }
+=======
+>>>>>>> user-posts
 
-    it { should have_selector('h1',    text: 'Sign up') }
-    it { should have_selector('title', text: full_title('Sign up')) }
+      describe "as an admin user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before do
+          sign_in admin
+          visit users_path
+        end
+
+        it { should have_link('delete', href: user_path(User.first)) }
+        it "should be able to delete another user" do
+          expect { click_link('delete') }.to change(User, :count).by(-1)
+        end
+        it { should_not have_link('delete', href: user_path(admin)) }
+        it "should not be able to delete self" do
+          expect { delete user_path(admin) }.not_to change(User, :count)
+        end
+      end
+    end
   end
 
-  describe "profile page" do
+describe "signup page" do
+  before { visit signup_path }
+
+  it { should have_selector('h1',    text: 'Sign up') }
+  it { should have_selector('title', text: full_title('Sign up')) }
+end
+
+describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
+    let!(:m1) { FactoryGirl.create(:post, user: user, content: "Foo") }
+    let!(:m2) { FactoryGirl.create(:post, user: user, content: "Bar") }
+
     before { visit user_path(user) }
 
     it { should have_selector('h1',    text: user.name) }
     it { should have_selector('title', text: user.name) }
+
+    describe "posts" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(user.posts.count) }
+    end
   end
 
   describe "signup" do

@@ -80,6 +80,10 @@ p {
   }
 }
 
+.navbar-search .input-prepend {
+  margin-bottom: 0;
+}
+
 /* footer */
 
 footer {
@@ -182,4 +186,35 @@ input, textarea, select, .uneditable-input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+<<<<<<< HEAD
+=======
+}
+
+/* posts */
+
+.posts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+>>>>>>> user-posts
 }
