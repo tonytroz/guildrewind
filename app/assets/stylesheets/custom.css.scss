@@ -40,6 +40,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -93,6 +94,16 @@ p {
   filter: none;
 }
 
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+  background-color: hsl(360, 0%, 17%) !important;
+}
+
+.navbar .nav > li > a {
+  color: #000;
+}
+
+.navbar .nav > li > a:hover {color:black;}
+
 .btn-custom {
   background-color: hsl(360, 0%, 17%) !important;
   background-repeat: repeat-x;
@@ -115,16 +126,18 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayLight;
+  border-top: 1px solid $gray;
   color: $grayLight;
   a {
     color: $gray;
     &:hover { 
-      color: $grayDarker;
+      text-decoration: none;
+      color: $guildRewindYellow;
     }
   }  
   small { 
     float: left; 
+    color: $grayDark;
   }
   ul {
     float: right;
