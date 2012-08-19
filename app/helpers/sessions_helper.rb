@@ -21,8 +21,6 @@ module SessionsHelper
     user == current_user
   end
 
-<<<<<<< HEAD
-=======
   def signed_in_user
     unless signed_in?
       store_location
@@ -30,7 +28,6 @@ module SessionsHelper
     end
   end
 
->>>>>>> user-posts
   def sign_out
     self.current_user = nil
     cookies.delete(:remember_token)
