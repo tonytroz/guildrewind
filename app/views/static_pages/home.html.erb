@@ -1,14 +1,12 @@
+<div class="container">
 <%= image_tag("home1.png", size: "5000x5000", border: 0, alt: "home1") %>
 <% if !signed_in? %>
   <div class="center">
 	  <%= link_to "Sign Up Now!", signup_path, id: "signup", class: "btn btn-large btn-custom" %>
   </div>
   <% end %>
-<div class="hero-unit center">
-  <%= image_tag("twitterButton.png", size: "100x100", border: 0, alt: "twitter") %>
-  Twitter
-  <%= image_tag("blogButton.png", size: "100x100", border: 0, alt: "blog") %>
-  Blog
-  <%= image_tag("statisticsButton.png", size: "100x100", border: 0, alt: "statistics") %>
-  Statistics
+<div class="hero-unit">
+  <%= image_tag("twitterButton.png", size: "90x90", border: 0, alt: "twitter") %>
+  <%= image_tag("blogButton.png", size: "90x90", border: 0, alt: "blog") %>
+  <%= image_tag("statisticsButton.png", size: "90x90", border: 0, alt: "statistics") %>
 </div>

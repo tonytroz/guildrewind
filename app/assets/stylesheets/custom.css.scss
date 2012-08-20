@@ -102,23 +102,8 @@ p {
   color: #000;
 }
 
-.navbar .nav > li > a:hover {color:black;}
-
-.btn-custom {
-  background-color: hsl(360, 0%, 17%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#494949", endColorstr="#2b2b2b");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#494949), to(#2b2b2b));
-  background-image: -moz-linear-gradient(top, #494949, #2b2b2b);
-  background-image: -ms-linear-gradient(top, #494949, #2b2b2b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #494949), color-stop(100%, #2b2b2b));
-  background-image: -webkit-linear-gradient(top, #494949, #2b2b2b);
-  background-image: -o-linear-gradient(top, #494949, #2b2b2b);
-  background-image: linear-gradient(#494949, #2b2b2b);
-  border-color: #2b2b2b #2b2b2b hsl(360, 0%, 14%);
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.19);
-  -webkit-font-smoothing: antialiased;
+.navbar .nav > li > a:hover {
+  color:black;
 }
 
 .navbar-search .search-query {
@@ -141,6 +126,23 @@ p {
     /*background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");*/
 }
 
+.btn-custom {
+  background-color: hsl(360, 0%, 17%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#494949", endColorstr="#2b2b2b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#494949), to(#2b2b2b));
+  background-image: -moz-linear-gradient(top, #494949, #2b2b2b);
+  background-image: -ms-linear-gradient(top, #494949, #2b2b2b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #494949), color-stop(100%, #2b2b2b));
+  background-image: -webkit-linear-gradient(top, #494949, #2b2b2b);
+  background-image: -o-linear-gradient(top, #494949, #2b2b2b);
+  background-image: linear-gradient(#494949, #2b2b2b);
+  border-color: #2b2b2b #2b2b2b hsl(360, 0%, 14%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.19);
+  -webkit-font-smoothing: antialiased;
+}
+
 /* footer */
 
 footer {
@@ -157,7 +159,7 @@ footer {
   }  
   small { 
     float: left; 
-    color: $grayDark;
+    color: $gray;
   }
   ul {
     float: right;
@@ -169,12 +171,29 @@ footer {
   }
 }
 
-/* home page */
+.footer-socialmedia {
+  margin: 1px;
+}
+
+.footernav {
+  margin-top: 3px;
+}
+
+.footernav-spacer {
+  margin-right: 5px;
+}
+
+/* static pages */
 #signup {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* miscellaneous */
+.hero-unit {
+  padding: 30px;
+}
+
+/* debug */
 
 .debug_dump {
   clear: both;
