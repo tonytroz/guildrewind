@@ -1,8 +1,10 @@
 <% provide(:title, 'Post') %>
+<h1><%= @post.id %></h1>
+
 <div class="hero-unit">
   <div class="row">
      <div class="span8">
-       <%= @post.content %>
+       <%= render @post %>
     </div>
   </div>
 </div>
