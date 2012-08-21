@@ -95,35 +95,33 @@ p {
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
+  color: $white;
   background-color: hsl(360, 0%, 17%) !important;
 }
 
 .navbar .nav > li > a {
-  color: #000;
+  color: $guildRewindYellow;
 }
 
 .navbar .nav > li > a:hover {
-  color:black;
+  color: $guildRewindYellow;
 }
 
 .navbar-search .search-query {
-    padding-left: 29px;
-    background-color: hsl(360, 0%, 17%) !important;
+  padding-left: 29px;
+  background-color: hsl(360, 0%, 17%) !important;
 }
 
 .navbar-search .icon-search {
-    position: absolute;
-    top: 6px;
-    left: 11px;
-    background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings-white.png");
+  position: absolute;
+  top: 6px;
+  left: 11px;
+  background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings-white.png");
 }
 
 .navbar-search .search-query:focus, .navbar-search .search-query.focused {
-    padding-left: 30px;
-}
-
-.search-query:focus + .icon-search {
-    /*background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");*/
+  color: $white;
+  padding-left: 30px;
 }
 
 .btn-custom {
@@ -187,10 +185,6 @@ footer {
 #signup {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.hero-unit {
-  padding: 10px;
 }
 
 .hero-unit {
@@ -260,6 +254,11 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid $guildRewindYellow;
+  box-shadow: 0 0 2px $guildRewindYellow;
+}
 
  /* users index */
 
