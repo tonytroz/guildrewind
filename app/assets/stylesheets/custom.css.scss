@@ -181,6 +181,15 @@ footer {
   padding: 30px;
 }
 
+.home-row {
+  background-color: $white;
+  border-radius: 3px;
+}
+
+.home-row-content {
+  float: left;
+}
+
 /* debug */
 
 .debug_dump {
