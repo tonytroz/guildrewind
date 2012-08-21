@@ -34,6 +34,11 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
 }
 
 /* typography */
@@ -72,6 +77,11 @@ p {
   float: left;
   letter-spacing: -1px;
   padding-top: 3px;
+}
+
+.navbar {
+  position: relative;
+  right: 0;
 }
 
 .navbar-inner {
@@ -182,8 +192,13 @@ footer {
 }
 
 .home-row {
+  display: table-row;
   background-color: $white;
   border-radius: 3px;
+}
+.home-row > .span4 {
+  display: table-cell;
+  width: 33%;
 }
 
 .home-row-content {
