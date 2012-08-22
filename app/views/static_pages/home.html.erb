@@ -10,14 +10,14 @@
 <div class="row home-row">
   <div class="span4">
     <%= image_tag("twitterButton.png", size: "80x80", border: 0, alt: "twitter", class: "home-row-content") %>
-    <span id="twitterfeed"><%= wrap "@GuildRewind Thanks for helping me find my lost guildies. We're reuniting the crew and moving to #GuildWars2! #GuildRewind #VideoGaming #GR" %></span>
+    <span id="twitterfeed"><%= link_to truncate_text(wrap("@GuildRewind Thanks for helping me find my lost guildies. We're reuniting the crew and moving to #GuildWars2! #GuildRewind #VideoGaming #GR"),124), "https://twitter.com/guildrewind", target: "_blank" %></span>
   </div>
   <div class="span4">
     <%= image_tag("blogButton.png", size: "80x80", border: 0, alt: "blog", class: "home-row-content") %>
     <span class="blogpostdate">2012-08-21</span><br />
-    <span class="blogpost">New Features</span></br /></br />
+    <span class="blogpost"><%= link_to truncate_text("New Features That Are In Development",30), "#" %></span></br /></br />
     <span class="blogpostdate">2012-08-01</span><br />
-    <span class="blogpost">GuildRewind Launch</span>
+    <span class="blogpost"><%= link_to truncate_text("GuildRewind Launch",30), "#" %></span>
   </div>
   <div class="span4">
     <%= image_tag("statisticsButton.png", size: "80x80", border: 0, alt: "statistics", class: "home-row-content") %>
@@ -25,6 +25,6 @@
     <span class="statistic">Number of Posts: </span><span class="stat pull-right">212</span><br />
     <span class="statistic">Number of Games: </span><span class="stat pull-right">3213</span><br />
     <span class="statistic">Number of Servers: </span><span class="stat pull-right">4321</span><br />
-    <span class="statistic">Number of Replies: </span><span class="stat pull-right">5000</span>
+    <span class="statistic">Number of Replies: </span><span class="stat pull-right">4554</span>
   </div>
 </div>

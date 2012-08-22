@@ -41,6 +41,14 @@ textarea {
   }
 }
 
+a {
+  color: $gray;
+  &:hover {
+    color: $guildRewindYellow;
+    text-decoration: underline;
+  }
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -209,8 +217,8 @@ footer {
   background-color: $white;
   display: table-cell;
   width: 30%;
-  min-height: 105px;
-  max-height: 105px;
+  min-height: 88px;
+  max-height: 88px;
 }
 
 .home-row-content {
