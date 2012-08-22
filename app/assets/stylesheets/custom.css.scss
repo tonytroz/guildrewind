@@ -183,26 +183,51 @@ footer {
 
 /* static pages */
 #signup {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 .hero-unit {
   padding: 30px;
 }
 
+#home-divider{
+  margin-top: 25px;
+  border-top: 1px solid $gray;
+}
+
 .home-row {
   display: table-row;
-  background-color: $white;
-  border-radius: 3px;
 }
 .home-row > .span4 {
+  margin-top: 40px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: $white;
   display: table-cell;
-  width: 33%;
+  width: 30%;
+  min-height: 95px;
+  max-height: 95px;
 }
 
 .home-row-content {
   float: left;
+  padding-right: 5px;
+}
+
+#twitterfeed{
+  font-weight: bold;
+}
+
+.blogpost {
+  font-weight: bold;
+}
+
+.statistic {
+  font-weight: bold;
+}
+
+.stat {
+  padding-right: 5px;
 }
 
 /* debug */
