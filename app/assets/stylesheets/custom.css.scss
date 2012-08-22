@@ -87,7 +87,7 @@ p {
   padding-top: 3px;
 }
 
-.navbar {
+.navbar, .nav {
   position: relative;
   right: 0;
 }
@@ -129,6 +129,16 @@ p {
   .search-query:focus  {
     color: $white;
     padding-left: 30px;
+  }
+}
+
+.dropdown-menu{
+  background-color: $white;
+  li {
+    a:hover {
+      color: $black;
+      background-color: $guildRewindYellow;
+    }
   }
 }
 
