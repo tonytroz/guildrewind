@@ -1,9 +1,9 @@
 <div id="carousel" class="center">
   <%= image_tag("home/carousel_1.png", height: "291", width: "825", border: 0, alt: "home1") %>
 </div>
-<% if !signed_in? %>
+<% if !user_signed_in? %>
   <div class="center">
-	  <%= link_to "Sign Up Now!", signup_path, id: "signup", class: "btn btn-large btn-custom" %>
+	  <%= link_to "Sign Up Now!", user_registration_path, id: "signup", class: "btn btn-large btn-custom" %>
   </div>
 <% end %>
 <div id="home-divider"></div>
