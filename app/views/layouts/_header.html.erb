@@ -1,11 +1,14 @@
 <header class="navbar center">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to image_tag("logos/logo.png", height: "32", width: "275", border: 0, alt: "logo"), root_path, id: "logo" %>
+      <%= link_to image_tag("logos/logo.png", height: "32", width: "275", 
+      border: 0, alt: "logo"), root_path, id: "logo" %>
       <nav>
         <%= link_to "New Post", new_post_path, class: "btn btn-custom" %>
         <%= link_to "Browse Posts", posts_path, class: "btn btn-custom" %>
+        <% if user_signed_in? %>
         <div class="pull-right gravatar-header"><%= gravatar_for(current_user, size: 30) %></div>
+        <% end %>
         <ul class="nav pull-right">
           <% if user_signed_in? %>
             <li id="fat-menu" class="active dropdown">
