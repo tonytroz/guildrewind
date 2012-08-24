@@ -1,26 +1,26 @@
 <div id="carousel" class="center">
-  <%= image_tag("home1.png", height: 291, width: "825", border: 0, alt: "home1") %>
+  <%= image_tag("home/carousel_1.png", height: "291", width: "825", border: 0, alt: "home1") %>
 </div>
 <% if !signed_in? %>
   <div class="center">
 	  <%= link_to "Sign Up Now!", signup_path, id: "signup", class: "btn btn-large btn-custom" %>
   </div>
 <% end %>
-<div id="home-divider" />
+<div id="home-divider"></div>
 <div class="row home-row">
   <div class="span4">
-    <%= image_tag("twitterButton.png", size: "80x80", border: 0, alt: "twitter", class: "home-row-content") %>
+    <%= image_tag("home/twitterButton.png", size: "80x80", border: 0, alt: "twitter", class: "home-row-content") %>
     <span id="twitterfeed"><%= link_to truncate_text(wrap("@GuildRewind Thanks for helping me find my lost guildies. We're reuniting the crew and moving to #GuildWars2! #GuildRewind #VideoGaming #GR"),124), "https://twitter.com/guildrewind", target: "_blank" %></span>
   </div>
   <div class="span4">
-    <%= image_tag("blogButton.png", size: "80x80", border: 0, alt: "blog", class: "home-row-content") %>
+    <%= image_tag("home/blogButton.png", size: "80x80", border: 0, alt: "blog", class: "home-row-content") %>
     <span class="blogpostdate">2012-08-21</span><br />
     <span class="blogpost"><%= link_to truncate_text("New Features That Are In Development",30), "#" %></span></br /></br />
     <span class="blogpostdate">2012-08-01</span><br />
     <span class="blogpost"><%= link_to truncate_text("GuildRewind Launch",30), "#" %></span>
   </div>
   <div class="span4">
-    <%= image_tag("statisticsButton.png", size: "80x80", border: 0, alt: "statistics", class: "home-row-content") %>
+    <%= image_tag("home/statisticsButton.png", size: "80x80", border: 0, alt: "statistics", class: "home-row-content") %>
     <span class="statistic">Number of Users: </span><span class="stat pull-right">113</span><br />
     <span class="statistic">Number of Posts: </span><span class="stat pull-right">212</span><br />
     <span class="statistic">Number of Games: </span><span class="stat pull-right">3213</span><br />
