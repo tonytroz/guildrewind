@@ -81,7 +81,7 @@ p {
 
 /* header */
 .gravatar-header {
-  background-color: $grayDark;
+  background-color: darken($grayDark,3%);
   padding-right: 10px;
 }
 
