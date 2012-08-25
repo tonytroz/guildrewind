@@ -17,7 +17,20 @@ Guildrewind::Application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   # Devise mailer
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = {
+    :host => '127.0.0.1',
+    :port => 3000
+  }
+  
+  config.action_mailer.smtp_settings = {
+     :address              => "smtp.gmail.com",
+     :port                 => 587,
+     :domain               => 'guildrewind.com',
+     :user_name            => 'troz@guildrewind.com',
+     :password             => '!Omdhafeiei0!',
+     :authentication       => :plain,
+     :enable_starttls_auto => true  
+   }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

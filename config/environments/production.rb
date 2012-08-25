@@ -54,6 +54,16 @@ Guildrewind::Application.configure do
   # Devise mailer
   config.action_mailer.default_url_options = { :host => 'guildrewind.com' }
 
+  config.action_mailer.smtp_settings = {
+     :address              => "smtp.gmail.com",
+     :port                 => 587,
+     :domain               => 'guildrewind.com',
+     :user_name            => 'troz@guildrewind.com',
+     :password             => '!Omdhafeiei0!',
+     :authentication       => :plain,
+     :enable_starttls_auto => true  
+   }
+
   # Enable threaded mode
   # config.threadsafe!
 
