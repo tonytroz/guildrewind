@@ -88,7 +88,7 @@ p {
 .gravatar {
   float: right;
   margin-top: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   border: 1px solid $white;
 }
 
@@ -141,6 +141,12 @@ p {
     color: $white;
     padding-left: 30px;
   }
+}
+
+.label-warning {
+  margin: 5px;
+  color: $grayDark;
+  background-color: $guildRewindYellow;
 }
 
 .dropdown-menu{

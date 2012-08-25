@@ -13,10 +13,10 @@
           <% if user_signed_in? %>
             <li id="fat-menu" class="active dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
+                Account<span class="label label-warning">1</span><b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Messages", "#" %></li>
+                <li><%= link_to "Messages (1)", "#" %></li>
                 <li class="divider"></li>
                 <li><%= link_to "Posts", "#" %></li>
                 <li class="divider"></li>
