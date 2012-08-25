@@ -58,8 +58,8 @@ Guildrewind::Application.configure do
      :address              => "smtp.gmail.com",
      :port                 => 587,
      :domain               => 'guildrewind.com',
-     :user_name            => 'troz@guildrewind.com',
-     :password             => '!Omdhafeiei0!',
+     :user_name            => 'no-reply@guildrewind.com',
+     :password             => 'PwmHQhij9f6olxb6HHg7',
      :authentication       => :plain,
      :enable_starttls_auto => true  
    }

@@ -22,9 +22,9 @@ Guildrewind::Application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'gmail.com',
-     :user_name            => 'troz@guildrewind.com',
-     :password             => '!Omdhafeiei0!',
+     :domain               => 'guildrewind.com',
+     :user_name            => 'no-reply@guildrewind.com',
+     :password             => 'PwmHQhij9f6olxb6HHg7',
      :authentication       => :plain,
      :enable_starttls_auto => true
    }
