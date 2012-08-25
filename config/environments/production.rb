@@ -52,7 +52,7 @@ Guildrewind::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Devise mailer
-  config.action_mailer.default_url_options = { :host => 'guildrewind.com' }
+  config.action_mailer.default_url_options = { :host => 'fierce-taiga-6873.herokuapp.com' }
 
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
