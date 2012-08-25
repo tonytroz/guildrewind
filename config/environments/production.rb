@@ -53,7 +53,6 @@ Guildrewind::Application.configure do
 
   # Devise mailer
   config.action_mailer.default_url_options = { :host => 'fierce-taiga-6873.herokuapp.com' }
-
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
@@ -62,8 +61,8 @@ Guildrewind::Application.configure do
      :password             => 'PwmHQhij9f6olxb6HHg7',
      :authentication       => :plain,
      :enable_starttls_auto => true  
-   }
-
+   
+}
   # Enable threaded mode
   # config.threadsafe!
 
