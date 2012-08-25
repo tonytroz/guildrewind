@@ -224,7 +224,9 @@ footer {
 }
 
 .hero-unit {
-  padding: 30px;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #home-divider{
@@ -233,14 +235,15 @@ footer {
 }
 
 .home-row {
-  display: table-row;
+
 }
 .home-row > .span4 {
-  margin-top: 40px;
-  padding: 5px;
-  border-radius: 3px;
   background-color: $white;
-  display: table-cell;
+  margin-top: 40px;
+  padding: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
   width: 30%;
   min-height: 88px;
   max-height: 88px;
