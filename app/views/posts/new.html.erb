@@ -6,7 +6,7 @@
     <div class="span6 offset3">
       <%= form_for(@post) do |f| %>
         <%= render 'fields', f: f %>
-        <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+        <div class="center"><%= f.submit "Post", class: "btn btn-large btn-primary" %></div>
       <% end %>
     </div>
   </div>

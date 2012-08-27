@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :post
+  has_many :posts
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

@@ -2,9 +2,13 @@
 <h1>All Posts</h1>
 
 <div class="hero-unit">
-  <%= will_paginate %>
-  <ul class="posts">
-    <%= render @posts %>
-  </ul>
-  <%= will_paginate %>
+  <div class="row">
+    <div class="span8 offset2">
+      <%= will_paginate %>
+      <ul class="posts">
+        <%= render @posts %>
+      </ul>
+      <%= will_paginate %>
+    </div>
+  </div>
 </div>
