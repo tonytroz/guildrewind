@@ -12,10 +12,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @games = Game.find(:all)
   end
 
   def create
     @post = current_user.posts.build(params[:post])
+    @game = Game.new(params[:game])
+    @post.game = @game
     if @post.save
       flash[:success] = "Post created!"
       redirect_to @post
@@ -25,10 +28,12 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = current_user.posts.find(params[:id])
+    @game = @post.game
   end
 
   def update
-    if @post.update_attributes(params[:user])
+    if @post.update_attributes(params[:user]) && @post.game.update_attributes(params[:game])
       flash[:success] = "Post updated"
       redirect_to @post
     else

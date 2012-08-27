@@ -1,5 +1,8 @@
 <%= render 'shared/error_messages', object: f.object %>
 
+<%= f.label :game %>
+<%= f.select :game, @games.map { |g| [g.name,g.id]} %>
+
 <%= f.label :guild_name %>
 <%= f.text_field :guild_name %>
 
