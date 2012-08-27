@@ -11,15 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120824213407) do
+ActiveRecord::Schema.define(:version => 20120827190435) do
 
   create_table "posts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "guild_name"
+    t.string   "character_name"
   end
 
+  add_index "posts", ["character_name"], :name => "index_posts_on_character_name"
+  add_index "posts", ["guild_name"], :name => "index_posts_on_guild_name"
   add_index "posts", ["user_id", "created_at"], :name => "index_posts_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
