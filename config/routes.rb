@@ -2,6 +2,7 @@ Guildrewind::Application.routes.draw do
   devise_for :users
 
   resources :posts
+  resources :replies
 
   root to: 'static_pages#home'
 

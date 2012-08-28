@@ -20,6 +20,7 @@ class Post < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :game
+  has_many :replies
 
   before_save :strip_html
 
