@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827192357) do
+ActiveRecord::Schema.define(:version => 20120828021534) do
 
   create_table "games", :force => true do |t|
     t.string   "name"
@@ -26,10 +26,13 @@ ActiveRecord::Schema.define(:version => 20120827192357) do
     t.datetime "updated_at",     :null => false
     t.string   "guild_name"
     t.string   "character_name"
+    t.string   "subject"
+    t.integer  "game_id"
   end
 
   add_index "posts", ["character_name"], :name => "index_posts_on_character_name"
   add_index "posts", ["guild_name"], :name => "index_posts_on_guild_name"
+  add_index "posts", ["subject"], :name => "index_posts_on_subject"
   add_index "posts", ["user_id", "created_at"], :name => "index_posts_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|

@@ -11,7 +11,5 @@
 class Game < ActiveRecord::Base
   attr_accessible :name
 
-  belongs_to :post
-
-  validates :game_id, presence: true
+  has_many :posts
 end

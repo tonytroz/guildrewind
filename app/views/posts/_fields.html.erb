@@ -1,13 +1,16 @@
 <%= render 'shared/error_messages', object: f.object %>
 
-<%= f.label :game %>
-<%= f.select :game, @games.map { |g| [g.name,g.id]} %>
+<%= f.label :game_name %>
+<%= collection_select(:post, :game_id, Game.find(:all), :id, :name, :prompt => 'Please select game') %>
 
 <%= f.label :guild_name %>
 <%= f.text_field :guild_name %>
 
 <%= f.label :character_name %>
 <%= f.text_field :character_name %>
+
+<%= f.label :subject %>
+<%= f.text_field :subject %>
 
 <%= f.label :content %>
 <%= f.text_field :content %>

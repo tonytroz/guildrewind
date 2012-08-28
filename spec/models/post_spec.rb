@@ -9,6 +9,8 @@
 #  updated_at     :datetime         not null
 #  guild_name     :string(255)
 #  character_name :string(255)
+#  subject        :string(255)
+#  game_id        :integer
 #
 
 require 'spec_helper'
