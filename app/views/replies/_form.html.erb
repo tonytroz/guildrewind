@@ -1,23 +1,10 @@
-<%= form_for(@reply) do |f| %>
-  <% if @reply.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reply.errors.count, "error") %> prohibited this reply from being saved:</h2>
-
-      <ul>
-      <% @reply.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for @reply, url: {controller: :replies, action: "create", post_id: @post.id, poster_id: @post.user.id} do |f| %>
+  
+  <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :unread %><br />
-    <%= f.check_box :unread %>
   </div>
   <div class="actions">
     <%= f.submit %>

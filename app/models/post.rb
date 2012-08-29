@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
   
   belongs_to :user
   belongs_to :game
-  has_many :replies
+  has_many :replies, dependent: :destroy
 
   before_save :strip_html
 

@@ -1,5 +1,5 @@
 class Reply < ActiveRecord::Base
-  attr_accessible :content, :unread
+  attr_accessible :content
 
   before_save :strip_html
 

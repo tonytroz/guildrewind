@@ -1,6 +1,18 @@
 <h1>Editing reply</h1>
 
-<%= render 'form' %>
+<%= form_for(@reply) do |f| %>
+  
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Show', @reply %> |
 <%= link_to 'Back', replies_path %>

@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @reply = @post.replies.build
   end
 
   def new
@@ -25,11 +26,10 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = current_user.posts.find(params[:id])
   end
 
   def update
-    if @post.update_attributes(params[:user])
+    if @post.update_attributes(params[:post])
       flash[:success] = "Post updated"
       redirect_to @post
     else
@@ -38,12 +38,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-     post = Post.find(params[:id])
-    unless current_user?(user)
-      user.destroy
-      flash[:success] = "User destroyed."
-    end
-    redirect_to users_path
+    post.destroy
+    flash[:success] = "Post destroyed."
+    redirect_to posts_path
   end
 
   private

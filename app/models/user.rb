@@ -18,8 +18,8 @@
 #
 
 class User < ActiveRecord::Base
-  has_many :posts
-  has_many :replies
+  has_many :posts, dependent: :destroy
+  has_many :replies, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

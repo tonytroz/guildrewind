@@ -1,40 +1,48 @@
 class RepliesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :correct_user, except: [:new, :create, :index, :show]
+  before_filter :correct_user,   only: [:show, :edit, :update, :destroy]
 
   def index
-    @replies = current_user.replies.find[:all]
+    @replies = Reply.find(:all, conditions: ['poster_id = ? or replier_id = ?',current_user.id, current_user.id])
   end
 
   def show
-    @reply = Reply.find(params[:id])
-  end
-
-  def new
-    @reply = Reply.new
   end
 
   def edit
-    @reply = Reply.find(params[:id])
   end
 
   def create
-    @reply = Reply.new(params[:reply])
+    @post = Post.find(params[:post_id])
+    @reply = @post.replies.build(params[:reply])
+    @reply.poster_id = params[:poster_id]
+    @reply.replier_id = current_user.id
+    if @reply.save
+      flash[:success] = "Reply created!"
+      redirect_to replies_path
+    else
+      render 'posts/show'
+    end
   end
 
   def update
-    @reply = Reply.find(params[:id])
+    if @reply.update_attributes(params[:reply])
+      flash[:success] = "Reply updated"
+      redirect_to @reply
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-    @reply = Reply.find(params[:id])
     @reply.destroy
+    redirect_to replies_path
   end
 
   private
 
     def correct_user
-      @reply = current_user.replies.find_by_id(params[:poster_id]) || current_user.replies.find_by_id(params[:replier_id])
-      redirect_to root_url if @reply.nil?
+      @reply = Reply.find(params[:id])
+      redirect_to root_url unless @reply.poster_id == current_user.id or @reply.replier_id == current_user.id
     end
 end
