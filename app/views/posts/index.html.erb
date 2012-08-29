@@ -6,7 +6,7 @@
     <div class="span8 offset2">
       <div class="center"><%= will_paginate %></div>
       <ul class="posts">
-        <%= render @posts %>
+        <%= render partial: 'post_index', post: @posts %>
       </ul>
       <div class="center"><%= will_paginate %></div>
     </div>

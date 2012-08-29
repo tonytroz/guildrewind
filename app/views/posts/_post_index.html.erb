@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Game</td>
+    <td>Subject</td>
+    <td>Guild Name</td>
+    <td>Character Name</td>
+    <td>Time</td>
+  </tr>
+<% @posts.each do |post| %>
+  <tr>
+    <td><span class="game"><%= post.game.name %></span><td>
+    <td><span class="guild_name"><%= post.guild_name %></span><td>
+    <td><span class="character_name"><%= post.character_name %></span><td>
+    <td><span class="subject"><%= link_to post.subject, post %></span><td>
+    <td><span class="timestamp">Posted <%= time_ago_in_words(post.created_at) %> ago.</span><td>
+  </tr>
+<% end %>
+</table>

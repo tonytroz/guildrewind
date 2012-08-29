@@ -1,10 +1,8 @@
-<li>
-  <span class="game"><%= post.game.name %></span>
-  <span class="guild_name"><%= post.guild_name %></span>
-  <span class="character_name"><%= post.character_name %></span>
-  <span class="subject"><%= post.subject %></span>
-  <span class="content"><%= post.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> ago.
-  </span>
-</li>
+<table>
+  <tr><td>Game:</td><td><span class="game"><%= post.game.name %></span></td></tr>
+  <tr><td>Subject:</td><td><span class="subject"><%= post.subject %></span></td></tr>
+  <tr><td>Guild Name:</td><td><span class="guild_name"><%= post.guild_name %></span></td></tr>
+  <tr><td>Character Name:</td><td><span class="character_name"><%= post.character_name %></span></td></tr>
+  <tr><td>Time:</td><td><span class="timestamp">Posted <%= time_ago_in_words(post.created_at) %> ago.</span></td></tr>
+  <tr><td>Content:</td><td><span class="content"><%= post.content %></span></td></tr>
+</table>

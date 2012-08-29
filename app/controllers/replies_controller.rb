@@ -7,6 +7,7 @@ class RepliesController < ApplicationController
   end
 
   def show
+    @reply.unread = false
   end
 
   def edit
