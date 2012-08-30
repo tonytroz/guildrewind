@@ -21,10 +21,10 @@
   </div>
   <div class="span4">
     <%= image_tag("home/statisticsButton.png", size: "80x80", border: 0, alt: "statistics", class: "home-row-content") %>
-    <span class="statistic">Number of Users: </span><span class="stat pull-right">113</span><br />
-    <span class="statistic">Number of Posts: </span><span class="stat pull-right">212</span><br />
-    <span class="statistic">Number of Games: </span><span class="stat pull-right">3213</span><br />
-    <span class="statistic">Number of Servers: </span><span class="stat pull-right">4321</span><br />
-    <span class="statistic">Number of Replies: </span><span class="stat pull-right">4554</span>
+    <span class="statistic">Number of Users: </span><span class="stat pull-right"><%= User.count %></span><br />
+    <span class="statistic">Number of Posts: </span><span class="stat pull-right"><%= Post.count %></span><br />
+    <span class="statistic">Number of Games: </span><span class="stat pull-right"><%= Game.count %></span><br />
+    <span class="statistic">Number of Servers: </span><span class="stat pull-right"><%= Server.count %></span><br />
+    <span class="statistic">Number of Replies: </span><span class="stat pull-right"><%= Reply.count %></span>
   </div>
 </div>

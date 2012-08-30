@@ -1,15 +1,18 @@
 <footer class="footer">
-  <small class="footernav">
+  <small class="footernav footernav-spacer">
     &copy;2012 GuildRewind
+  </small>
+  <small class="footernav">
+    <%= link_to "ToS", termsofservice_path %>
   </small>
   <nav>
     <ul>
-      <li class = "footernav"><%= link_to "About",   about_path %></li>
-      <li class = "footernav"><%= link_to "Contact", contact_path %></li>
-      <li class = "footernav footernav-spacer"><%= link_to "Help",   help_path %></li>
-      <li class ="footer-socialmedia"><%= link_to image_tag("footer/facebook.png", mouseover: "/assets/footer/facebook_rollover.png", size: "13x25", border: 0, alt: "facebook"), "https://www.facebook.com/GuildRewind", target: "_blank" %></li>
-      <li class ="footer-socialmedia"><%= link_to image_tag("footer/twitter.png", mouseover: "/assets/footer/twitter_rollover.png", size: "25x25", border: 0, alt: "facebook"), "https://www.twitter.com/GuildRewind", target: "_blank" %></li>
-      <li class ="footer-socialmedia"><%= link_to image_tag("footer/googleplus.png", mouseover: "/assets/footer/googleplus_rollover.png", size: "25x25", border: 0, alt: "googleplus"), "https://plus.google.com/b/100842597151172352100/100842597151172352100/posts", target: "_blank" %></li>
+      <li class="footernav"><%= link_to "About",   about_path %></li>
+      <li class="footernav"><%= link_to "Contact", contact_path %></li>
+      <li class="footernav footernav-spacer"><%= link_to "Help",   help_path %></li>
+      <li class="footer-socialmedia"><%= link_to image_tag("footer/facebook.png", mouseover: "/assets/footer/facebook_rollover.png", size: "13x25", border: 0, alt: "facebook"), "https://www.facebook.com/GuildRewind", target: "_blank" %></li>
+      <li class="footer-socialmedia"><%= link_to image_tag("footer/twitter.png", mouseover: "/assets/footer/twitter_rollover.png", size: "25x25", border: 0, alt: "facebook"), "https://www.twitter.com/GuildRewind", target: "_blank" %></li>
+      <li class="footer-socialmedia"><%= link_to image_tag("footer/googleplus.png", mouseover: "/assets/footer/googleplus_rollover.png", size: "25x25", border: 0, alt: "googleplus"), "https://plus.google.com/b/100842597151172352100/100842597151172352100/posts", target: "_blank" %></li>
     </ul>
   </nav>
 </footer>
