@@ -82,6 +82,9 @@ p {
 /* header */
 .gravatar-header {
   background-color: darken($grayDark,3%);
+  margin-top: -2px;
+  padding-top: 2px;
+
   padding-right: 10px;
 }
 
@@ -99,11 +102,13 @@ p {
 }
 
 .navbar, .nav {
+
   position: relative;
   right: 0;
 }
 
 .navbar-inner {
+  padding-top: 2px;
   background-color: $guildRewindYellow;
   background-image: none;
   background-repeat: no-repeat;
@@ -111,6 +116,8 @@ p {
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
+  margin-top: -2px;
+  padding-top: 12px;
   color: $white;
   background-color: hsl(360, 0%, 17%) !important;
 }
@@ -191,10 +198,6 @@ p {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.29);
   -webkit-font-smoothing: antialiased;
   border-color: #000 #000 #000;
-}
-
-.gravatar {
-  display: inline;
 }
 
 /* footer */
