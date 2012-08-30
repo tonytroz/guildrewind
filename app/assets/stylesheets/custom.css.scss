@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 
-$guildRewindYellow: #fdcd33;
+$guildRewindYellow: #fdcd33; /* hsl(46,98,60) rgb(253,205,51)  */
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -174,6 +174,23 @@ p {
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.19);
   -webkit-font-smoothing: antialiased;
+}
+
+.btn-custom-yellow {
+  background-color: hsl(45, 99%, 52%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fed866", endColorstr="#fdc10b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fed866), to(#fdc10b));
+  background-image: -moz-linear-gradient(top, #fed866, #fdc10b);
+  background-image: -ms-linear-gradient(top, #fed866, #fdc10b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fed866), color-stop(100%, #fdc10b));
+  background-image: -webkit-linear-gradient(top, #fed866, #fdc10b);
+  background-image: -o-linear-gradient(top, #fed866, #fdc10b);
+  background-image: linear-gradient(#fed866, #fdc10b);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.29);
+  -webkit-font-smoothing: antialiased;
+  border-color: #000 #000 #000;
 }
 
 .gravatar {

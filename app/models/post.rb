@@ -16,10 +16,11 @@
 include ActionView::Helpers::SanitizeHelper
 
 class Post < ActiveRecord::Base
-  attr_accessible :content, :guild_name, :character_name, :subject, :game_id
+  attr_accessible :content, :guild_name, :character_name, :subject, :game_id, :server_id
   
   belongs_to :user
   belongs_to :game
+  belongs_to :server
   has_many :replies, dependent: :destroy
 
   before_save :strip_html
@@ -30,6 +31,7 @@ class Post < ActiveRecord::Base
   validates :subject, presence: true, length: { maximum: 100 }
   validates :user_id, presence: true
   validates :game_id, presence: true
+  validates :server_id, presence: true
   
 
   default_scope order: 'posts.created_at DESC'

@@ -12,4 +12,5 @@ class Game < ActiveRecord::Base
   attr_accessible :name
 
   has_many :posts
+  has_many :servers
 end
