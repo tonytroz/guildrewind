@@ -16,19 +16,19 @@
                 Account<span class="label label-warning">1</span><b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Messages (1)", "#" %></li>
+                <li><%= link_to "Messages (1)", replies_path %></li>
                 <li class="divider"></li>
                 <li><%= link_to "Posts", "#" %></li>
                 <li class="divider"></li>
                 <li><%= link_to "Settings", edit_user_registration_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", destroy_user_session_path %>
+                  <%= link_to "Sign Out", destroy_user_session_path %>
                 </li>
               </ul>
             </li>
           <% else %>
-            <li class="active"><%= link_to "Sign in", new_user_session_path %></li>
+            <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
           <% end %>
         </ul>
         <form class="navbar-search pull-right">
