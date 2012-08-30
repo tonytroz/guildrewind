@@ -1,11 +1,13 @@
+<div class="center">
 <%= form_for @reply, url: {controller: :replies, action: "create", post_id: @post.id, poster_id: @post.user.id} do |f| %>
   
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, rows: "3", class: "span5" %>
   </div>
   <div class="actions">
     <%= f.submit "Reply", class: "btn btn-large btn-custom" %>
   </div>
 <% end %>
+</div>

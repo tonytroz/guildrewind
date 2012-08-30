@@ -252,7 +252,7 @@ footer {
 .hero-unit {
   background-color: $white;
   padding: 0px;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
@@ -362,4 +362,8 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+.well {
+  padding: 10px;
 }

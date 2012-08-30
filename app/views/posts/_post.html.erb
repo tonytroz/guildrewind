@@ -1,8 +1,21 @@
-<table>
-  <tr><td>Game:</td><td><span class="game"><%= post.game.name %></span></td></tr>
-  <tr><td>Subject:</td><td><span class="subject"><%= post.subject %></span></td></tr>
-  <tr><td>Guild Name:</td><td><span class="guild_name"><%= post.guild_name %></span></td></tr>
-  <tr><td>Character Name:</td><td><span class="character_name"><%= post.character_name %></span></td></tr>
-  <tr><td>Time:</td><td><span class="timestamp">Posted <%= time_ago_in_words(post.created_at) %> ago.</span></td></tr>
-  <tr><td>Content:</td><td><span class="content"><%= post.content %></span></td></tr>
+<ul class="breadcrumb">
+  <li><a href="#"><%= post.game.name %></a> <span class="divider">/</span></li>
+  <li><a href="#"><%= post.server.name %></a> <span class="divider">/</span></li>
+  <li class="active"><%= post.subject %></li>
+</ul>
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Date:</th><td><span class="timestamp well-small">Posted <%= time_ago_in_words(post.created_at) %> ago.</span></td>
+    <th>Post Number:</th><td><%= post.id %></td>
+  </tr>
+  <tr>
+    <th>Guild:</th><td><span class="guild_name"><%= post.guild_name %></span></td>
+    <th>Character:</th><td><span class="character_name"><%= post.character_name %></span></td>
+  </tr>
+  <tr>
+    <th>Type:</th><td>LF Old Guildies</td>
+    <th>Circa:</th><td>2005</td>
+  </tr>
 </table>
+<span class="content well"><%= wrap(post.content) %></span>
