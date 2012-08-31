@@ -1,19 +1,20 @@
 <%= render 'shared/error_messages', object: f.object %>
 
-<%= f.label :game_name %>
+<%= f.label :game_name, "Game Name" %>
 <%= collection_select(:post, :game_id, Game.find(:all), :id, :name, :prompt => 'Please Select Game') %>
 
-<%= f.label :server_name %>
+<%= f.label :server_name, "Server Name" %>
 <%= collection_select(:post, :server_id, Server.find(:all), :id, :name, :prompt => 'Please Select Server') %>
 
-<%= f.label :guild_name %>
+<%= f.label :guild_name, "Guild Name" %>
 <%= f.text_field :guild_name %>
 
-<%= f.label :character_name %>
+<%= f.label :character_name, "Character Name"%>
 <%= f.text_field :character_name %>
 
-<%= f.label :subject %>
+<%= f.label :subject, "Subject" %>
 <%= f.text_field :subject %>
 
-<%= f.label :content %>
+<%= f.label :content, "Message" %>
 <%= f.text_area :content %>
+

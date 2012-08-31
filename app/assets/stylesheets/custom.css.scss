@@ -49,6 +49,7 @@ a {
   }
 }
 
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -338,6 +339,10 @@ input, textarea, select, .uneditable-input {
 input:focus, select:focus, textarea:focus {
   border: 1px solid $guildRewindYellow;
   box-shadow: 0 0 2px $guildRewindYellow;
+}
+
+.control-label {
+  margin-top: 10px;
 }
 
 /* posts */

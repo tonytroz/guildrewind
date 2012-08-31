@@ -3,10 +3,13 @@
 
 <div class="hero-unit">
   <div class="row">
-    <div class="span6 offset3">
-      <%= form_for(@post) do |f| %>
+    <div class="span10 offset1">
+      <%= form_for(@post)  do |f| %>
         <%= render 'fields', f: f %>
-        <div class="center"><%= f.submit "Post", class: "btn btn-large btn-custom" %></div>
+        <div class="center">
+          <%= f.submit "Post", class: "btn btn-large btn-custom" %>
+          <%= link_to "Back", :back, class: "btn btn-large" %>
+        </div>
       <% end %>
     </div>
   </div>
