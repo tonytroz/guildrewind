@@ -12,7 +12,7 @@
     <%= image_tag("home/twitterButton.png", size: "80x80", border: 0, alt: "twitter", class: "home-row-content") %>
     <div class="cycle-tweets">
       <% @tweets.each do |tweet| %>
-          <%= content_tag(:span, link_to(wrap(truncate_text(tweet.content,140)), tweet.url, target: "_blank")) %>
+          <%= content_tag(:span, link_to(wrap(truncate_text(tweet.content,130)), tweet.url, target: "_blank")) %>
     
       <% end %>
     </div>
