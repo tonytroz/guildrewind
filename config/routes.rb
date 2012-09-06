@@ -2,7 +2,7 @@ Guildrewind::Application.routes.draw do
   devise_for :users
 
   resources :posts
-  resources :replies, except: [:new]
+  resources :replies, except: [:new, :edit, :update]
 
   root to: 'static_pages#home'
 

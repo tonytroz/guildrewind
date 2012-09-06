@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
+  margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
   color: $white;
@@ -346,6 +347,22 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* posts */
+
+table {
+  word-wrap: break-word;.
+  max-width: 100%;
+}
+
+td {
+  max-width: 70px;
+}
+
+thead th {
+  background-color: $grayDark;
+  border-color: $white;
+  border-spacing: 2px;
+  color: $white;
+}
 
 .posts {
   list-style: none;

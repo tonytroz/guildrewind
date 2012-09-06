@@ -1,18 +1,33 @@
-<h1>Listing replies</h1>
+<% provide(:title, 'All Replies') %>
+<h1>All Replies</h1>
 
-<table>
-  <tr>
-    <th>Content</th>
-  </tr>
-
-<% @replies.each do |reply| %>
-  <tr>
-    <td><%= reply.content %></td>
-    <td><%= link_to 'Show', reply %></td>
-    <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
-    <td><%= link_to 'Destroy', reply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div class="hero-unit">
+  <div class="row">
+    <div class="span10 offset1">
+      <div class="center"><%= will_paginate %></div>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Post</th>
+              <th>Subject</th>
+              <th>Message</th>
+              <th>Time</th>
+              <th>Controls</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @replies.each do |r| %>
+              <tr>
+                <td><span class="post"><%= link_to r.post.id, controller: :posts, action: :show, id: r.post.id %></span></td>
+                <td><span class="subject"><%= link_to r.post.subject, controller: :posts, action: :show, id: r.post.id %></span></td>
+                <td><span class="content"><%= truncate_text(r.content, 30) %></span></td>
+                <td><span class="timestamp"><%= time_ago_in_words(r.created_at) %> ago.</span></td>
+                <td><%= link_to "Show", r %> | Reply | <%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <div class="center"><%= will_paginate %></div>
+    </div>
+  </div>
+</div>

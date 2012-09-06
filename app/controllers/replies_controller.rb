@@ -1,16 +1,13 @@
 class RepliesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :correct_user,   only: [:show, :edit, :update, :destroy]
+  before_filter :correct_user,   only: [:show, :destroy]
 
   def index
-    @replies = Reply.find(:all, conditions: ['poster_id = ? or replier_id = ?',current_user.id, current_user.id])
+    @replies = Reply.paginate(page: params[:page]).find(:all, conditions: ['poster_id = ? or replier_id = ?',current_user.id, current_user.id])
   end
 
   def show
     @reply.unread = false
-  end
-
-  def edit
   end
 
   def create
@@ -23,15 +20,6 @@ class RepliesController < ApplicationController
       redirect_to replies_path
     else
       render 'posts/show'
-    end
-  end
-
-  def update
-    if @reply.update_attributes(params[:reply])
-      flash[:success] = "Reply updated"
-      redirect_to @reply
-    else
-      render 'edit'
     end
   end
 
