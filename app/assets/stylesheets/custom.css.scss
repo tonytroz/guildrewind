@@ -283,8 +283,12 @@ footer {
   padding-right: 5px;
 }
 
-#twitterfeed{
+.cycle-tweets{
+  display: inline;
+  position: fixed;
+  width: 200px;
   font-weight: bold;
+  font-style: italic;
 }
 
 .blogpost {

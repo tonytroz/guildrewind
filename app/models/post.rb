@@ -16,7 +16,7 @@
 include ActionView::Helpers::SanitizeHelper
 
 class Post < ActiveRecord::Base
-  attr_accessible :content, :guild_name, :character_name, :subject, :game_id, :server_id
+  attr_accessible :content, :guild_name, :character_name, :subject, :game_id, :server_id, :gaming_date
   
   belongs_to :user
   belongs_to :game
@@ -33,7 +33,6 @@ class Post < ActiveRecord::Base
   validates :game_id, presence: true
   validates :server_id, presence: true
   
-
   default_scope order: 'posts.created_at DESC'
 
   private

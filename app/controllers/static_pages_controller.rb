@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @tweets = Tweet.random
   end
 
   def help

@@ -5,7 +5,6 @@
       <th>Server</th>
       <th>Subject</th>
       <th>Guild Name</th>
-      <th>Character Name</th>
       <th>Time</th>
     </tr>
   </thead>
@@ -16,7 +15,6 @@
       <td><span class="server_name"><%= p.server.name %></span></td>
       <td><span class="subject"><%= link_to p.subject, p %></span></td>
       <td><span class="guild_name"><%= p.guild_name %></span></td>
-      <td><span class="character_name"><%= p.character_name %></span></td>
       <td><span class="timestamp"><%= time_ago_in_words(p.created_at) %> ago.</span></td>
     </tr>
     <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120830170211) do
+ActiveRecord::Schema.define(:version => 20120906194535) do
 
   create_table "games", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120830170211) do
     t.string   "subject"
     t.integer  "game_id"
     t.integer  "server_id"
+    t.string   "gaming_date"
   end
 
   add_index "posts", ["character_name"], :name => "index_posts_on_character_name"
@@ -56,6 +57,13 @@ ActiveRecord::Schema.define(:version => 20120830170211) do
   end
 
   add_index "servers", ["game_id"], :name => "index_servers_on_game_id"
+
+  create_table "tweets", :force => true do |t|
+    t.string   "content"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

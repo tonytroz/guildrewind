@@ -10,7 +10,12 @@
 <div class="row home-row">
   <div class="span4">
     <%= image_tag("home/twitterButton.png", size: "80x80", border: 0, alt: "twitter", class: "home-row-content") %>
-    <span id="twitterfeed"><%= link_to truncate_text(wrap("@GuildRewind Thanks for helping me find my lost guildies. We're reuniting the crew and moving to #GuildWars2! #GuildRewind #VideoGaming #GR"),124), "https://twitter.com/guildrewind", target: "_blank" %></span>
+    <div class="cycle-tweets">
+      <% @tweets.each do |tweet| %>
+          <%= content_tag(:span, link_to(wrap(truncate_text(tweet.content,140)), tweet.url, target: "_blank")) %>
+    
+      <% end %>
+    </div>
   </div>
   <div class="span4">
     <%= image_tag("home/blogButton.png", size: "80x80", border: 0, alt: "blog", class: "home-row-content") %>
