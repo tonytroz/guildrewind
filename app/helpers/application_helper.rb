@@ -16,4 +16,8 @@ module ApplicationHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.email, class: "gravatar")
   end
+
+  def number_of_unread_replies
+    Reply.count(conditions: ['(poster_id = ? or replier_id = ?) and unread = ?',current_user.id, current_user.id, true])
+  end
 end

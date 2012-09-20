@@ -17,12 +17,16 @@
           </thead>
           <tbody>
             <% @replies.each do |r| %>
-              <tr>
+              <% if r.unread? %>
+                <tr class="unread">
+              <% else %>
+                <tr>
+              <% end %> 
                 <td><span class="post"><%= link_to r.post.id, controller: :posts, action: :show, id: r.post.id %></span></td>
                 <td><span class="subject"><%= link_to r.post.subject, controller: :posts, action: :show, id: r.post.id %></span></td>
                 <td><span class="content"><%= truncate_text(r.content, 30) %></span></td>
                 <td><span class="timestamp"><%= time_ago_in_words(r.created_at) %> ago.</span></td>
-                <td><%= link_to "Show", r %> | Reply | <%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to "Show", r %> | <%= link_to 'Delete', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </tbody>

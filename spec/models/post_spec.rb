@@ -11,6 +11,8 @@
 #  character_name :string(255)
 #  subject        :string(255)
 #  game_id        :integer
+#  server_id      :integer
+#  gaming_date    :string(255)
 #
 
 require 'spec_helper'

@@ -7,7 +7,9 @@ class RepliesController < ApplicationController
   end
 
   def show
-    @reply.unread = false
+    @reply.toggle!(:unread) if @reply.unread?
+    @post = @reply.post
+    @reply2 = @post.replies.build
   end
 
   def create

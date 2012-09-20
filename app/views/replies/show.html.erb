@@ -1,16 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="hero-unit">
+  <div class="row">
+     <div class="span10 offset1">
+       <span class="content well"><%= wrap(@reply.content) %></span>
+    </div>
+    
+    <div class="center">
+      <%= form_for @reply2, url: {controller: :replies, action: "create", post_id: @post.id, poster_id: @post.user.id, replier_id: @reply.replier_id} do |f| %>
+  
+        <%= render 'shared/error_messages', object: f.object %>
 
-<p>
-  <b>Content:</b>
-  <%= @reply.content %>
-</p>
+        <div class="field">
+          <%= f.text_area :content, rows: "3", class: "span5" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Reply", class: "btn btn-large btn-custom" %>
+        </div>
+      <% end %>
+      <%= link_to 'Back', replies_path %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>Unread:</b>
-  <%= @reply.unread %>
-</p>
 
 
-<%= link_to 'Edit', edit_reply_path(@reply) %> |
-<%= link_to 'Back', replies_path %>
+
+
 
