@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   padding-top: 10px;
   background-color: $black;
 }
@@ -27,6 +28,14 @@ section {
 
 textarea {
   resize: vertical;
+}
+
+a {
+  color: $gray;
+  &:hover {
+    color: $grayLight;
+    text-decoration: underline;
+  }
 }
 
 .center {
@@ -41,18 +50,9 @@ textarea {
   }
 }
 
-a {
-  color: $gray;
-  &:hover {
-    color: $grayLight;
-    text-decoration: underline;
-  }
-}
-
-
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {.
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
@@ -75,9 +75,9 @@ h2 {
   color: $grayLight;
 }
 
-p {
+p.small {
   font-size: 1em;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 /* header */
