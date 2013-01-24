@@ -75,11 +75,6 @@ h2 {
   color: $grayLight;
 }
 
-p.small {
-  font-size: 1em;
-  line-height: 1.25;
-}
-
 /* header */
 .unread-messages {
   padding-bottom: -5px;
@@ -308,6 +303,12 @@ footer {
 
 .tos > p {
   font-size: 1em;
+  line-height: 1.25;
+}
+
+p.small {
+  font-size: 1em;
+  line-height: 1.25;
 }
 
 /* debug */
