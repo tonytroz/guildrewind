@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'devise', '2.2.3'
-gem 'jquery-rails', '2.2.1'
+gem 'jquery-rails', '2.1.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
